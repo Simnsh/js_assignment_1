@@ -8,8 +8,12 @@
       last_name = prompt("What is your last name?");
       alert(`Your name is ${first_name} ${last_name}`);
 
-      children = prompt("How many children do you have?");
-      document.write(`You have ${children} children`);
+      children = Number(prompt("How many children do you have?"));
+      if (children == 0) {
+        document.write(`You have no children`);
+      } else if (children == 1) {
+        document.write(`You have 1 child`);
+      } else document.write(`You have ${children} children`);
     </script>
   </body>
 </html>
