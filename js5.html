@@ -1,0 +1,30 @@
+<html>
+  <header>
+    <title>Javascript Assignment 5</title>
+  </header>
+  <body>
+    <div id="table"></div>
+
+    <script>
+      // function that create times table
+      function timesTable(num) {
+        // initiaize content variable
+        let content = "";
+
+        // loop from 1 to 12, to get the result of num * (1~12)
+        for (let i = 1; i < 13; i++) {
+          // append each row into content
+          content += `${num} x ${i} = ${num * i}<br>`;
+        }
+        document.getElementById("table").innerHTML += content;
+      }
+
+      // call the function
+      timesTable(3);
+      document.getElementById("table").innerHTML += "<hr>";
+      timesTable(7);
+      document.getElementById("table").innerHTML += "<hr>";
+      timesTable(9);
+    </script>
+  </body>
+</html>

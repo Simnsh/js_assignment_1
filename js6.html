@@ -1,0 +1,31 @@
+<html>
+  <header>
+    <title>Javascript Assignment 6</title>
+  </header>
+  <body>
+    <div id="answer"></div>
+
+    <script>
+      // count function
+      function count(num_arr, value) {
+        // count number of element that is lesser than value
+        let count = 0;
+        for (let i = 0; i < num_arr.length; i++) {
+          if (num_arr[i] < value) {
+            count++;
+          }
+        }
+
+        return count;
+      }
+
+      // testCount() function
+      function testCount() {
+        num_count = count([3, 55, 30, 28, 9, 12, 7, 5], 10);
+        document.getElementById("answer").innerHTML = num_count;
+      }
+
+      testCount();
+    </script>
+  </body>
+</html>

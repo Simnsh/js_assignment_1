@@ -1,0 +1,33 @@
+<html>
+  <header>
+    <title>Javascript Assignment 4</title>
+  </header>
+  <body>
+    <script>
+      num_one = Number(prompt("Enter the first number: "));
+      num_two = Number(prompt("Enter the second number: "));
+
+      if (num_one > num_two) {
+        let temp = num_one;
+        num_one = num_two;
+        num_two = temp;
+      }
+
+      let sum = 0;
+      let odd = "";
+
+      for (let i = num_one; i <= num_two; i++) {
+        if (i % 2 != 0) {
+          odd += i + " ";
+        }
+
+        sum += i;
+      }
+
+      document.write(`
+        Odd numbers in the range: ${odd}<br>
+        Sum of all numbers in the range: ${sum}
+      `);
+    </script>
+  </body>
+</html>
